@@ -26,7 +26,7 @@ import javafx.scene.control.cell.CheckBoxTableCell;
 import javafx.scene.control.cell.ComboBoxTableCell;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.layout.BorderPane;
-import javafx.util.converter.LocalDateStringConverter;
+import javafx.util.converter.LocalDateTimeStringConverter;
 
 public class TablasController implements Initializable {
 	
@@ -84,6 +84,7 @@ public class TablasController implements Initializable {
 		nombreColumn.setCellFactory(TextFieldTableCell.forTableColumn());
 		tipoColumn.setCellFactory(ComboBoxTableCell.forTableColumn(TipoFichero.values()));
 		ejecutableColumn.setCellFactory(CheckBoxTableCell.forTableColumn(ejecutableColumn));
+		modificacionColumn.setCellFactory(TextFieldTableCell.forTableColumn(new LocalDateTimeStringConverter()));
 		
 	}
 	
